@@ -1,0 +1,23 @@
+[project]
+name = "read-tune"
+version = "0.1.0"
+description = "The front end for Read Tune project"
+authors = [
+    {name = "Vinicius José",email = "vinijosenog@hotmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "django (>=5.2.3,<6.0.0)",
+    "python-dotenv (>=1.1.0,<2.0.0)",
+    "parameterized (>=0.9.0,<0.10.0)",
+]
+
+[tool.poetry]
+
+[tool.poetry.group.dev.dependencies]
+black = "^25.1.0"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

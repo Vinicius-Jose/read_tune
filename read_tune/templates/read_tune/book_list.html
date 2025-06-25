@@ -1,0 +1,70 @@
+{% extends "read_tune/layout.html" %}
+{% block body %}
+{% load static %}
+
+
+
+<div class="container-fluid">
+    <div class="row justify-content-center g-2 list">
+        {% for book in books %}
+        {% if book.authors %}
+        <div class="card book-card shadow-sm mb-4 ms-2 me-2 d-flex flex-column" style="width: 14rem;">
+            <img src="{{book.thumbnail}}" alt="Book Cover" class="img-fluid rounded-start card-img-top" />
+            <div class="card-body flex-grow-1 d-flex flex-column">
+                <h5 class="card-title"><strong>{{book.title}}</strong></h5>
+                <p class="card-text mb-1"><strong>Authors:</strong>
+                    {% for author in book.authors %}
+                    {{author}}
+                    {% endfor %}
+                </p>
+                <p class="card-text mb-1"><strong>Categories:</strong>
+                    {% for category in book.categories %}
+                    {{category}}
+                    {% endfor %}
+                </p>
+                <p class="card-text mb-1"><strong>Language:</strong> {{book.language}}</p>
+                <p class="card-text mb-1"><strong>ISBN:</strong> {{book.isbn}}</p>
+                <p class="card-text mt-2 book-description" style="font-size: 0.9rem;"><em>{{book.description}}</em></p>
+            </div>
+            <div class="card-footer bg-transparent border-0" style=" align-self: center;">
+                <a type="button" class="btn btn-primary " data-bs-toggle="modal"
+                    data-bs-target="#modal_{{book.volume_id}}" class="btn  w-100">Generate</a>
+            </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+
+    </div>
+
+</div>
+
+{% for book in books %}
+{% if book.authors %}
+<div class="modal fade" id="modal_{{book.volume_id}}" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable  modal-dialog-centered">
+        <div class="modal-content text-center">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5 text-center" id="modalLabel_{{book.volume_id}}">{{book.title}}</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Choose playlist style</p>
+                <select class="form-select" aria-label="Playlist Style" id="select_{{book.volume_id}}">
+                    {% for style in styles %}
+                    <option value="{{style.name}}">{{style.name}} - {{style.description}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary"
+                    onclick="generate_playlist(`{{book.volume_id}}`)">Generate</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endfor %}
+
+<script src="{% static 'read_tune/book.js' %}"></script>
+{% endblock %}

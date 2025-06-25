@@ -1,0 +1,20 @@
+{% extends "read_tune/layout.html" %}
+{% block body %}
+
+
+
+
+<div class="container-fluid">
+    <div class="justify-content-center ">
+        <div class="playlist_generated mx-auto">
+            <div> <iframe style="border-radius:12px" title="playlist"
+                    src="https://open.spotify.com/embed/playlist/{{playlist.id}}?utm_source=generator" width="100%"
+                    height="500px" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

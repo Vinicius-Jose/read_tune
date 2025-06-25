@@ -1,0 +1,82 @@
+.floating-search {
+    position: fixed;
+    left: 50%;
+    top: 6%;
+    transform: translateX(-50%);
+    z-index: 1050;
+    width: 50%;
+    border-radius: 1rem;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 0.5rem 1rem;
+}
+
+.floating-search .form-control {
+    border: none;
+    box-shadow: none;
+}
+
+.floating-search .btn-icon {
+    border: none;
+    background: transparent;
+    padding: 0;
+    color: #0d6efd;
+    /* cor primária do Bootstrap */
+}
+
+.list {
+
+    padding-top: 10%;
+
+}
+
+
+.book-card {
+    max-width: 540px;
+    overflow: hidden;
+}
+
+.book-description {
+    max-height: 200px;
+    overflow-y: auto;
+    font-size: 0.9rem;
+    padding-right: 0.5rem;
+}
+
+.book-description::-webkit-scrollbar {
+    width: 8px;
+}
+
+.book-description::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.book-description::-webkit-scrollbar-thumb {
+    background: #bbb;
+    border-radius: 10px;
+}
+
+.book-description::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
+
+.book-description {
+    scrollbar-width: thin;
+    scrollbar-color: #bbb #f1f1f1;
+    border-radius: 10px;
+}
+
+
+.modal select.form-select {
+    white-space: normal;
+    max-width: 100%;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+
+.playlist_generated {
+    max-width: 60%;
+    padding-top: 10%;
+}

@@ -1,0 +1,26 @@
+{% extends "read_tune/layout.html" %}
+{% block body %}
+
+
+
+
+<div class="container-fluid">
+    <div class="row justify-content-center g-2 list">
+        {% for playlist in playlists %}
+
+        <div class="col-4 col-xxl-3">
+            <div> <iframe style="border-radius:12px" title="playlist"
+                    src="https://open.spotify.com/embed/playlist/{{playlist.id}}?utm_source=generator" width="100%"
+                    height="352px" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"></iframe>
+            </div>
+        </div>
+        {% endfor %}
+
+
+
+    </div>
+
+</div>
+{% endblock %}
