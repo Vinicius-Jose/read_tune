@@ -15,6 +15,14 @@
 
 <body>
 
+
+    <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'index' %}">Playlists</a>
+        </div>
+    </nav>
+
+
     <div class="floating-search">
         <form class="d-flex align-items-center" role="search" action="{% url 'book' %}" method="get">
             <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search" id="query"
