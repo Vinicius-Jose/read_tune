@@ -20,7 +20,7 @@ def index(request: HttpRequest) -> HttpResponse:
 def search_book(request: HttpRequest) -> HttpResponse:
     api = ReadTuneAPI()
     query = request.GET.get("query")
-    books = api.search_books(query)
+    books = api.search_books(query, max_results=20)
     styles = api.get_playlist_styles()
     return render(
         request, "read_tune/book_list.html", {"books": books, "styles": styles}
@@ -30,8 +30,8 @@ def search_book(request: HttpRequest) -> HttpResponse:
 def generate_playlist(request: HttpRequest, volume_id: str) -> HttpResponse:
     api = ReadTuneAPI()
     style = request.GET.get("style")
-    max_songs = request.GET.get("max_songs", 10)
-    min_songs = request.GET.get("min_songs", 10)
+    max_songs = request.GET.get("max_songs", 30)
+    min_songs = request.GET.get("min_songs", 20)
     playlist = api.generate_playlist(
         volume_id=volume_id,
         playlist_style=style,

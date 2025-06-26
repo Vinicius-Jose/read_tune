@@ -1,0 +1,12 @@
+{% extends "read_tune/layout.html" %}
+{% block body %}
+<div style="padding-top: 10%;">
+    <div class="alert alert-danger" role="alert">
+        Service temporary unavailable, please try again later.
+    </div>
+</div>
+
+<div class="bg-transparent border-0" style=" align-self: center;">
+    <a type="button" class="btn btn-primary " href="{% url 'index' %}" class="btn  w-100">Go Back</a>
+</div>
+{% endblock %}
