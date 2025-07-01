@@ -26,7 +26,8 @@ SECRET_KEY = environ.get("DJANGO_SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True if environ.get("DJANGO_DEBUG") == "True" else False
 
-ALLOWED_HOSTS = [".localhost", "127.0.0.1", "[::1]", "https://read-tune.onrender.com/"]
+PROD_HOST = environ.get("PROD_HOST", "[::1]")
+ALLOWED_HOSTS = [".localhost", "127.0.0.1", PROD_HOST]
 
 
 # Application definition
