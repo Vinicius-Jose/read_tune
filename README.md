@@ -3,13 +3,14 @@
 ![Django](https://img.shields.io/badge/Django-5.2.3%2B-blue)
 [![License](https://img.shields.io/badge/License-Apache%202.0-orange)](./LICENSE)
 
+Access the project: [https://read-tune.onrender.com/](https://read-tune.onrender.com/)
 ## 🎵 Read Tune Frontend
 - This is the frontend interface for the [Read Tune API](https://github.com/Vinicius-Jose/read_tune_api), built with Django, HTML, CSS, JavaScript, and Bootstrap. It provides a user-friendly interface for interacting with the Read Tune music recommendation system.
 
 
 
 ## Where can I access ?
- - Currently, the application is not publicly accessible. It will be available online soon. If you'd like to know more, feel free to contact me here or via [Linkedin](https://www.linkedin.com/in/vin%C3%ADcius-jos%C3%A9-pierri-nogueira-341aa2175/)
+ - You can access and let the AI create your personalized playlist [here](https://read-tune.onrender.com/) If you'd like to know more, feel free to contact me here or via [Linkedin](https://www.linkedin.com/in/vin%C3%ADcius-jos%C3%A9-pierri-nogueira-341aa2175/)
 
  
 ## Which technologies were used?

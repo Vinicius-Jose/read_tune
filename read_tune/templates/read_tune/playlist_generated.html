@@ -7,11 +7,14 @@
 <div class="container-fluid">
     <div class="justify-content-center ">
         <div class="playlist_generated mx-auto">
-            <div> <iframe style="border-radius:12px" title="playlist"
+            <h3>Your playlist is ready <span>&#x1F431;&#x200D;&#x1F453;</span>!</h3>
+            <div class="d-flex flex-column justify-content-center ">
+                <iframe style="border-radius:12px" title="playlist"
                     src="https://open.spotify.com/embed/playlist/{{playlist.id}}?utm_source=generator" width="100%"
                     height="500px" allowfullscreen=""
                     allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                     loading="lazy"></iframe>
+                <button type="button" class="btn btn-primary mt-2">Go Home Page</button>
             </div>
         </div>
     </div>

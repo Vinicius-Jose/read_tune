@@ -6,6 +6,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 72 72'>
+  <text x='50%' y='50%' font-size='60' text-anchor='middle' dominant-baseline='central'>&#x1F4DA;</text>
+</svg>">
+
     <title>Read Tune</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
@@ -13,21 +18,21 @@
 </head>
 
 
-<body>
+<body style="background-color: cornsilk;">
 
-
-    <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+    <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark"
+        style="background-image: url({%  static 'read_tune/navbar_background.png' %}); background-position-x: -150px;">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{% url 'index' %}">Playlists</a>
+            <a class="navbar-brand" href="{% url 'index' %}">&#x1F4DA; Read Tune</a>
         </div>
     </nav>
 
 
     <div class="floating-search">
         <form class="d-flex align-items-center" role="search" action="{% url 'book' %}" method="get">
-            <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search" id="query"
-                name="query">
-            <button class="btn-icon" type="submit" aria-label="Pesquisar">
+            <input class="form-control me-2" type="search" placeholder="Search by book, author or ISBN..."
+                aria-label="Search" id="query" name="query">
+            <button class="btn-icon" type="submit" aria-label="Search">
                 <i data-feather="search" width="24" height="24"></i>
             </button>
         </form>
@@ -46,6 +51,63 @@
         integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK"
         crossorigin="anonymous"></script>
 </body>
+<footer class="bd-footer mt-5 " style="background-color: #0d3f72;">
+    <div class="container py-4 py-md-5 px-4 px-md-3 text-body-secondary">
+        <div class="row" style="color:white">
+            <div class="col-lg-3 mb-3">
+                <a class="d-inline-flex align-items-center mb-2 text-body-emphasis text-decoration-none"
+                    href="{% url 'index' %}" aria-label="Read Tune">
+                    <h3 style="color: white;">&#x1F4DA; Read Tune</h3>
+                </a>
+                <ul class="list-unstyled small">
+                    <li class="mb-2">
+                        Created by Vinícius J. P. Nogueira</a>.
+                    </li>
+                    <li class="mb-2">
+                        BackEnd API Code licensed
+                        <a class="text-white text-decoration-none"
+                            href="https://github.com/Vinicius-Jose/read_tune_api/blob/main/LICENSE" target="_blank"
+                            rel="license noopener">Apache License 2.0 API</a>, FrontEnd Code licensed
+                        <a class="text-white text-decoration-none"
+                            href="https://github.com/Vinicius-Jose/read_tune/blob/main/LICENSE" target="_blank"
+                            rel="license noopener">Apache License 2.0</a>.
+                    </li>
+                    <li class="mb-2">Currently v1.0.0.</li>
+                </ul>
+            </div>
+            <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+                <h5>Links</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2">
+                        <a class="text-white text-decoration-none" href="{% url 'index' %}">Home</a>
+                    </li>
+                    <li class="mb-2">
+                        <a class="text-white text-decoration-none"
+                            href="https://open.spotify.com/user/31ts4uftk6ujv6pdighjm2dgidyu">Spotify
+                            Perfil</a>
+                    </li>
+                    <li class="mb-2">
+                        <a class="text-white text-decoration-none"
+                            href="https://www.linkedin.com/in/vin%C3%ADcius-jos%C3%A9-pierri-nogueira-341aa2175/">Contact
+                            me Linkedin</a>
+                    </li>
+                    <li class="mb-2">
+                        <a class="text-white text-decoration-none" href="https://github.com/Vinicius-Jose">Github</a>
+                    </li>
+                    <li class="mb-2">
+                        <a class="text-white text-decoration-none"
+                            href="https://github.com/Vinicius-Jose/read_tune_api">BackEnd source code</a>
+                    </li>
+                    <li class="mb-2">
+                        <a class="text-white text-decoration-none"
+                            href="https://github.com/Vinicius-Jose/read_tune">FrontEnd source code</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
 <script src="https://unpkg.com/feather-icons"></script>
 <script>
     feather.replace();
