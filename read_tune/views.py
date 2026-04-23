@@ -12,8 +12,8 @@ def index(request: HttpRequest) -> HttpResponse:
     playlists = []
     try:
         playlists = api.get_generated_playlists()
-    except ConnectionError:
-        pass
+    except ConnectionError as e:
+        print(e)
     return render(request, "read_tune/index.html", {"playlists": playlists})
 
 

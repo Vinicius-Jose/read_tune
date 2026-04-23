@@ -28,7 +28,7 @@ class ReadTuneAPI:
 
     def get_generated_playlists(self) -> list[dict]:
         self.authenticate()
-        url = f"{self.url}/spotify/playlist"
+        url = f"{self.url}/youtube/playlist"
         response = requests.get(url, headers=self.headers)
         return response.json() if response.status_code == 200 else []
 
