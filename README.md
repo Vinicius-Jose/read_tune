@@ -71,6 +71,8 @@ Access the project: [https://read-tune.onrender.com/](https://read-tune.onrender
     docker run -dti -p 8080:8080 --env-file .env  --name read_tune_image read_tune 
     ```
     - In your favorite browser open [http://127.0.0.1:8080](http://127.0.0.1:8080)
+## Android APK
+    - Download the latest release of the Android version of the app [here](https://github.com/Vinicius-Jose/read_tune/releases/download/1.0.0/ReadTune.apk) 
 
 ## 📄 License
 - This project is licensed under the [Apache 2.0 License](./LICENSE).
